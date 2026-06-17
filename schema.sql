@@ -1,4 +1,4 @@
--- Criação da tabela de usuários
+-- Joao aqui eu fiz a criação da tabela de usuários
 CREATE TABLE IF NOT EXISTS usuarios (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Criação da tabela de jogos
+-- aqui fiz a criação da tabela de jogos
 CREATE TABLE IF NOT EXISTS jogos (
     id SERIAL PRIMARY KEY,
     usuario_id INTEGER NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS jogos (
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
 
--- Criação da tabela de posições reveladas
+-- E aqui foi a criação da tabela de posições reveladas
 CREATE TABLE IF NOT EXISTS posicoes_reveladas (
     id SERIAL PRIMARY KEY,
     jogo_id INTEGER NOT NULL,
