@@ -5,7 +5,7 @@ class AuthController {
         try {
             const { nome, email, dataNascimento, senha, confirmacaoSenha } = req.body;
 
-            // Validar campos obrigatórios
+            
             if (!nome || !email || !dataNascimento || !senha || !confirmacaoSenha) {
                 return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
             }
